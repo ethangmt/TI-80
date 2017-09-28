@@ -1,0 +1,35 @@
+PROGRAM:VECTOR
+:CLRHOME
+:DISP "COM 1 "
+:DISP "XY 2 "
+:INPUT " ",A
+:IF (A=1)
+:THEN
+:GOTO B
+:END
+:
+:IF (A=2)
+:THEN
+:GOTO C
+:END
+:
+:LBL B
+:INPUT "MAG ",N
+:INPUT "ANGLE ",O
+:NCOS O->X
+:NSIN 0->Y
+:DISP "X",X
+:DISP "Y",Y
+:GOTO A
+:
+:LBL C
+:INPUT "X",N
+:INPUT "Y",O
+:√((n^2)+(O^2))->M
+:TAN^-1 (O/N)->R
+:DISP "MAG",M
+:DISP "ANG",R
+:GOTO A
+:
+:LBL A
+:STOP
